@@ -1,0 +1,202 @@
+---
+import Categories from "./Categories.astro";
+---
+
+<div class="nav-wrapper">
+  <nav class="">
+    <div class="logo">
+      <img src="logo-placeholder.png" alt="" srcset="" />
+      <div class="logo-text">Logo</div>
+    </div>
+
+    <div class="navlinks">
+      <div class="search">
+        <form action="">
+          <input
+            id="search-bar"
+            class="bi bi-search"
+            placeholder="Search Products..."
+            autocomplete="off"
+            type="text"
+          /><input id="search-submit" type="button" value="Search" />
+        </form>
+      </div>
+      <a href="" class="auth-link">
+        <div class="auth-icon"><i class="bi bi-person-circle"></i></div>
+        <div class="auth-text">Login or Register</div>
+      </a>
+      <div class="basket">
+        <a href="" class="basket-icon">
+          <i class="bi bi-cart4"></i>
+          <span class="basket-count">0</span>
+        </a>
+      </div>
+      <a href="" class="location-select">
+        <div class="location-button">
+          <i class="bi bi-geo-alt-fill"></i> Change Location
+          <div class="location-indicator">None Selected</div>
+        </div>
+      </a>
+      <div class="search-toggle"><i class="bi bi-search"></i></div>
+    </div>
+  </nav>
+</div>
+
+<style>
+  .nav-wrapper {
+    background-color: rgb(231, 231, 231);
+  }
+  nav {
+    padding: 0.8rem;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  }
+  .logo img {
+    width: 70px;
+  }
+  .logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+  .logo-text {
+    padding-left: 1.5rem;
+    font-size: 2rem;
+    color: rgb(55, 55, 55);
+  }
+  .navlinks {
+    display: flex;
+    flex: 4;
+    align-items: center;
+  }
+  .navlinks > * {
+    margin: 0 1rem 0 1rem;
+  }
+
+  .search {
+    flex: 4;
+  }
+
+  .location-select {
+    flex: 1;
+  }
+
+  .auth-link {
+    flex: 1;
+  }
+  .basket {
+    flex: 1;
+  }
+  .search form {
+    display: flex;
+  }
+
+  #search-bar {
+    border: 2px solid grey;
+    border-right: 0;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    min-width: 12rem;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+  #search-bar:focus {
+    outline: none;
+  }
+
+  #search-submit {
+    border: 2px solid grey;
+    border-left: 0;
+    font-size: 1.3rem;
+    background-color: rgb(55, 55, 55);
+    padding: 0 2rem 0 2rem;
+    color: aliceblue;
+    outline: none;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition-duration: 0.2s;
+  }
+
+  #search-submit:hover {
+    cursor: pointer;
+    background-color: rgb(74, 74, 74);
+  }
+  .location-button {
+    background-color: aliceblue;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    background-color: rgb(55, 55, 55);
+    color: aliceblue;
+    font-size: 1.2rem;
+  }
+
+  .location-button:hover {
+    background-color: rgb(74, 74, 74);
+  }
+  .location-indicator {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .auth-link:hover {
+    color: rgb(74, 74, 74);
+    cursor: pointer;
+  }
+  .auth-icon {
+    font-size: 2rem;
+  }
+  .auth-text {
+    font-size: 1.2rem;
+  }
+  .basket {
+    font-size: 2rem;
+  }
+  .basket:hover {
+    color: rgb(74, 74, 74);
+    cursor: pointer;
+  }
+  .search-toggle {
+    font-size: 2rem;
+
+    display: none;
+  }
+  .search-toggle:hover {
+    color: rgb(74, 74, 74);
+    cursor: pointer;
+  }
+  @media (max-width: 1280px) {
+    .search-toggle {
+      display: block;
+    }
+    .basket {
+      display: none;
+    }
+    .auth-text {
+      display: none;
+    }
+    .search {
+      display: none;
+    }
+    .location-select {
+      display: none;
+    }
+    .navlinks {
+      flex: 0;
+      flex-direction: row-reverse;
+    }
+    .logo {
+      flex: 0;
+    }
+    .logo-text {
+      display: none;
+    }
+  }
+</style>
