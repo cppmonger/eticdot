@@ -1,0 +1,54 @@
+---
+import ItemCard from "../components/ItemCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="container top">
+    <div class="top-header">Popular Products</div>
+    <div class="items">
+      <ItemCard
+        itemName="Product"
+        itemPrice="130$"
+        itemOriginalPrice="245$"
+        imageUrl="product.jpeg"
+        brandName="Philips"
+        brandUrl="https://www.philips.com"
+      />
+      <ItemCard
+        itemName="Product"
+        itemPrice="130$"
+        itemOriginalPrice="245$"
+        imageUrl="product.jpeg"
+        brandName="Philips"
+        brandUrl="https://www.philips.com"
+      />
+      <ItemCard
+        itemName="Product"
+        itemPrice="130$"
+        itemOriginalPrice="245$"
+        imageUrl="product.jpeg"
+        brandName="Philips"
+        brandUrl="https://www.philips.com"
+      />
+      <ItemCard
+        itemName="Product"
+        itemPrice="130$"
+        itemOriginalPrice="245$"
+        imageUrl="product.jpeg"
+        brandName="Philips"
+        brandUrl="https://www.philips.com"
+      />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .top-header {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .items {
+    display: flex;
+  }
+</style>
