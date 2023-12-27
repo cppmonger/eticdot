@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import "normalize.css";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
 ---
 
@@ -36,9 +37,10 @@ const { title } = Astro.props;
 
     <link rel="icon" href="favicon.png" />
   </head>
-  <body>
+  <body style="min-height: 100vh;">
     <Navbar />
     <slot />
+    <Footer />
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       crossorigin="anonymous"></script>
